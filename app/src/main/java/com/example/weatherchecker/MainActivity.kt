@@ -3,7 +3,6 @@ package com.example.weatherchecker
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
-import android.content.Context
 import android.content.Intent
 import android.location.LocationManager
 import android.net.Uri
@@ -13,12 +12,8 @@ import android.provider.Settings
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.navigationevent.NavigationEventDispatcher
 import com.example.weatherchecker.model.WeatherResponse
 import com.example.weatherchecker.utild.Constants
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -66,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         deviceId: Int
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults, deviceId)
-        if (requestCode == REQUEST_LOCATON_CODE && grantResults.size > 0) {
+        if (requestCode == REQUEST_LOCATON_CODE && grantResults.isNotEmpty()) {
             Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
             requestlocationdata()
         } else {
@@ -102,7 +97,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun islocationon(): Boolean {
-        val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
                 || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
     }
