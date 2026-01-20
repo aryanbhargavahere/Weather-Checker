@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Weather Checker</string>
+    <string name="bucuresti_bd">BUCURESTI, BD</string>
+    <string name="_20_april_2019_2_08_pm">20 April 2019, 2:08 PM</string>
+    <string name="clear_sky">Clear Sky</string>
+    <string name="_29_c">29°C</string>
+    <string name="min_temp_05_05_am">Min Temp: 05:05 AM</string>
+    <string name="max_temp_05_05_pm">Max Temp: 05:05 PM</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="_06_40_am">06:40 AM</string>
+    <string name="sunset">Sunset</string>
+    <string name="_06_40_pm">06:40 PM</string>
+    <string name="wind">Wind</string>
+    <string name="_6_km_h">6 km/h</string>
+    <string name="pressure">Pressure</string>
+    <string name="_1013_hpa">1013 hPa</string>
+    <string name="humidity">Humidity</string>
+    <string name="_75">75%</string>
+    <string name="visibility">Visibility</string>
+    <string name="_10_km">10 km</string>
+</resources>
