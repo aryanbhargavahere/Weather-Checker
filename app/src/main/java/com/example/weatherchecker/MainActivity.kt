@@ -34,7 +34,7 @@ import java.util.TimeZone
 
 class MainActivity : AppCompatActivity() {
     private lateinit var locationCallback: LocationCallback
-    private val REQUEST_LOCATON_CODE = 123321
+    private val REQUEST_LOCATON= 123321
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         deviceId: Int
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults, deviceId)
-        if (requestCode == REQUEST_LOCATON_CODE && grantResults.isNotEmpty()) {
+        if (requestCode == REQUEST_LOCATON && grantResults.isNotEmpty()) {
             Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
             requestlocationdata()
         } else {
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
                     android.Manifest.permission.ACCESS_COARSE_LOCATION,
                     android.Manifest.permission.ACCESS_FINE_LOCATION
                 ),
-                REQUEST_LOCATON_CODE
+                REQUEST_LOCATON
             )
         }
     }
